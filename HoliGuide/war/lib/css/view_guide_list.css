@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+      
+.padrow {
+	padding-bottom: 15px;
+	padding-right: 15px
+}
+
+p {
+ text-align: center;
+ line-height: 100px; /* where the magic happens */
+}
+
+h4.rating {
+	color: #000;
+}
+
+stardiv {
+	width: 200px;
+	margin: 50px auto;
+}
+
+starspan {
+	font-size: 40px;
+	color: orange;
+	cursor: pointer;
+}
+
+starspan:before {
+	content: "\2605";
+	position: absolute;
+	color: orange;
+}
+
+.filter-description {
+	width: 300px;
+}
+
+#sort-guide {
+	width: 200px;
+}

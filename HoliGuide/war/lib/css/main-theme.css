@@ -1,0 +1,85 @@
+@CHARSET "ISO-8859-1";
+@font-face {
+    font-family: 'existencelight';
+    src: url('/lib/fonts/Existence-Light-webfont.eot');
+    src: url('/lib/fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/lib/fonts/Existence-Light-webfont.woff') format('woff'),
+         url('/lib/fonts/Existence-Light-webfont.ttf') format('truetype'),
+         url('/lib/fonts/Existence-Light-webfont.svg#existencelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	background: url('/lib/img/whitespace_filler.jpg');
+}
+
+h3 { 
+	color: yellow;
+	margin: 10px 0 5px 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.page-header-content{
+	color: yellow; 
+	text-align:center;
+}
+
+.headerDDLStyle{
+	width: 150px; 
+	display:inline; 
+	vertical-align:top;
+}
+
+.content {
+	padding-top: 40px;
+	background-color: #fff;
+	padding: 20px;
+	margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+      
+.page-header {
+  background-color: #2a2a2a;
+  padding: 20px 20px 10px;
+  margin: -20px -10px 20px;
+  -webkit-border-radius: 0 0 50px 50px;
+  -moz-border-radius: 0 0 50px 50px;
+  border-radius: 0 0 50px 50px;
+}
+      
+.content-header { 
+	font-size: 2em; 
+	font-weight:bold;
+}
+
+.navbar-static-top {
+  margin-bottom: 0;
+}
+
+.container {
+	margin: 0 100px 0 100px;
+	width: auto;
+}
+
+.container-top {
+	margin: 0 150px 0 150px;
+	width: auto;
+}
+
+.navbar-header a {
+	font-family: 'existencelight';
+	color: #fff;
+	font-size: 2.4em;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.navbar-header a span {
+	color:#ff4629;
+}

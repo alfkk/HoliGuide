@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>HoliGuide | Your First-Stop Tour Service</title>
+		<link href="/lib/ext/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  		<link href="/lib/ext/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/lib/css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Engagement' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="/lib/js/move-top.js"></script>
+		<script type="text/javascript" src="/lib/js/easing.js"></script>
+		<script type="text/javascript">
+						jQuery(document).ready(function($) {
+							$(".scroll").click(function(event){		
+								event.preventDefault();
+								$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+							});
+						});
+		</script>
+		
+		<style type="text/css">
+		
+		.content {
+	  		padding-top: 40px;
+	        background-color: #fff;
+	        
+	        padding: 20px;
+	        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+	        -webkit-border-radius: 0 0 6px 6px;
+	           -moz-border-radius: 0 0 6px 6px;
+	                border-radius: 0 0 6px 6px;
+	        -webkit-box-shadow: 0 1px 20px rgba(0,0,0,.15);
+	           -moz-box-shadow: 0 1px 20px rgba(0,0,0,.15);
+	                box-shadow: 0 1px 20px rgba(0,0,0,.15);
+	      }
+		
+		.sidebar {
+		    background: none;
+		    margin: 10px;
+		    padding: 0 10px;
+		    width: 600px;
+		    border-radius: 10px;
+		    position:absolute; 
+			top:50%; 
+			left:50%;
+			margin-left: -250px; 
+		 	margin-top: -100px 
+		}
+		
+		.box {
+		    display: inline-block;
+		    width: 190px;
+		    box-sizing: border-box;
+		    padding: 10px;
+		    margin-bottom: 30px;
+		    text-align: justify;
+		    background: black;
+		}
+		.box:nth-of-type(odd) {
+		    margin-right: 100px;
+		}
+		.center { 
+			margin-left:auto;margin-right:auto; 
+		}
+		.middle{
+		text-align:center;
+		}
+	
+		</style>
+	</head>
+	<body>
+	<!---start-wrap----->
+					<!---start-header----->
+					<div class="header" id="home" id="content"> 
+						<div class="top-header"> 
+							<div class="wrap">
+							<div class="logo">
+								<a href="#">Holi<span>Guide</span></a>
+							</div>
+							<div class="top-nav">
+								<ul>
+									<li class="active"><a href="#home" class="scroll">Home</a></li>
+									<li><a href="#about" class="scroll">About</a></li>
+									<li><a href="#team" class="scroll">Our Places</a></li>
+								</ul>
+							</div>
+							<div class="clear"> </div>
+							</div>
+					 	</div>
+					</div>
+					<!---//End-header----->
+		<div class="container">			
+	 	<div class="content">
+	 	<div class="col-xs-12">
+	 		<div class="row middle">
+	 			Which Type of User Are You?
+	 		</div>
+	 	</div>
+	 	<div class="row">
+		  <div class="col-md-6">
+		  	<div class="row middle">	
+		 		<div class="box">
+						<a href="view_itinerary_list_traveller.jsp?Id=Edward"><img src="/lib/img/traveler.jpg"></a> 
+					
+	               </div>
+	         </div>
+        	<div class="row middle">
+        	 		Traveler  
+        	</div>
+		  </div>
+		  <div class="col-md-6">
+			  <div class="row middle">
+		 		<div class="box">	
+		                   <a href="view_itinerary_list.jsp?Id=Edward"><img src="/lib/img/tour_guide.jpg"></a>
+		             
+	            </div>
+	         </div>  
+	         <div class="row middle">
+		         	Tour Guide
+	         </div>  
+		  </div>
+		</div>
+	 </div>		
+	</div>
+	</body>
+</html>
