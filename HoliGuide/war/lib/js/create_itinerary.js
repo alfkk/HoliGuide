@@ -142,6 +142,9 @@ $(".chosen").on('click','.remove',function(e){
 /* Add add function */
 $(".selection").on('click','.add',function(e){
 	destroyJPages();
+	if($('.removable').text() != "") {
+		$('.removable').remove();
+	}
 	$(this).attr('class', 'remove');
 	$(this).children('span').attr('class', 'glyphicon glyphicon-remove');
 	$(this).parents('li').find('a.remove').after('<a class="cal"><span class="glyphicon glyphicon-calendar"></span></a>');
@@ -183,6 +186,10 @@ function paginateChosen() {
 		containerID : "itemContainer1",
 		perPage: 3
 	});
+	if($('#itemContainer1 li').length == 0) {
+		$("div.holder1").jPagesTwo("destroy");
+		$('#itemContainer1').parent('div').find('ul').after('<div class="removable alert alert-info">Please add some itinerary from the selection on the left.</div>');
+	}
 }
 paginate();
 /* End add pagination function */

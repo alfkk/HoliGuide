@@ -34,7 +34,7 @@ body {
 			<img src="..\lib\img\CCFPaperplane.png" style="height:200px; width:200px">
 		</div>
 		<div class="col-xs-6 .col-sm-4">
-			  <h1>Tour Confirmed!
+			  <h1>Your itinerary has been successfully created!
 			  <br>
 			  <br>
 			  <a href="/viewitinerarylist"><small>Go back to My Itineraries</small></a>

@@ -177,6 +177,7 @@
 						</div>
 						 <div class="col-xs-6"> 
 						 	<div class="row">
+						 		<a href="viewitinerarylist?Delete=Yes&id=<c:out value='${guide.itineraryID}'/>"><span class="glyphicon glyphicon glyphicon-remove pull-right"></span></a>
 						 		<h4><strong>Status: <span class="guide-status">
 						 			<span style="display:none;">
 						 			<c:if test="${guide.status eq 'Pending Review'}">1</c:if>
@@ -194,7 +195,6 @@
 								  		Itinerary whose owner has already selected a tour guide.
 								</ul>
 						 		</span></a></h4>
-						 		<a href="viewitinerarylist?Delete=Yes&id=<c:out value='${guide.itineraryID}'/>"><span class="glyphicon glyphicon glyphicon-remove pull-right"></span></a>
 						 	</div>
 						 </div>		
 					</div>
@@ -221,7 +221,11 @@
 						</div>
 					</div>
 					<div class="row buttonRightPositioning">
+					
+					<c:if test="${guide.status ne 'Reviewed'}">
 						<a href= "/tourguidefeedback"><button type="button" class="btn btn-danger">Give Feedback</button></a>
+					</c:if>	
+						
 						<a href= "app/itinerary_details.jsp"><button type="button" class="btn btn-warning">See full itinerary</button></a>
 					</div>
 				</div>

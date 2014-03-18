@@ -220,7 +220,11 @@
 						</div>
 					</div>
 					<div class="row buttonRightPositioning">
+					
+					<c:if test="${guide.status ne 'Closed'}">
 						<a href= "reviewitinerary"><button type="button" class="btn btn-danger">Review Itinerary</button></a>
+					</c:if>	
+						
 						<a href= "app/itinerary_details_new.jsp"><button type="button" class="btn btn-warning">See full itinerary</button></a>
 					</div>
 				</div>

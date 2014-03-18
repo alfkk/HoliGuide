@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			<div class="col-md-5 left-bar">
-				<form class="form-horizontal" role="form" action="/app/success_page.jsp">
+				<form class="form-horizontal" role="form" action="app/success_page_tourguide_review.jsp">
 				  <div class="form-group">
 				    <label class="col-sm-4 control-label">Travel date</label>
 				    <div class="col-sm-8">

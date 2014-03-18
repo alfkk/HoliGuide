@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<t:master>
+<t:master_tourGuide>
 <jsp:attribute name="css">
 <link href="" rel="stylesheet">
 <style type="text/css">
@@ -34,13 +34,13 @@ body {
 			<img src="..\lib\img\CCFPaperplane.png" style="height:200px; width:200px">
 		</div>
 		<div class="col-xs-6 .col-sm-4">
-			  <h1>Tour Confirmed!
+			  <h1>Your tour review has been successfully submitted!
 			  <br>
 			  <br>
-			  <a href="/viewitinerarylist"><small>Go back to My Itineraries</small></a>
+			  <a href="/viewtourguideitinerarylist"><small>Go back to My Itineraries</small></a>
 			  </h1>
 		</div>
 	</div>
 </div>
 </jsp:body>
-</t:master>
+</t:master_tourGuide>
