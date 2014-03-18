@@ -172,6 +172,7 @@
 						<div class="col-xs-6"> 
 						 	<div class="row">
 								<div class="country-name"><h4><strong><c:out value="${guide.destination}"/> #<c:out value="${guide.itineraryID}"/></strong></h4></div>
+								
 							</div>
 						</div>
 						 <div class="col-xs-6"> 
@@ -193,6 +194,7 @@
 								  		Itinerary whose owner has already selected a tour guide.
 								</ul>
 						 		</span></a></h4>
+						 		<a href="viewitinerarylist?Delete=Yes&id=<c:out value='${guide.itineraryID}'/>"><span class="glyphicon glyphicon glyphicon-remove pull-right"></span></a>
 						 	</div>
 						 </div>		
 					</div>

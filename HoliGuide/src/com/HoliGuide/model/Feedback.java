@@ -1,6 +1,8 @@
 package com.HoliGuide.model;
+import java.io.Serializable;
+import javax.persistence.Id;
 
-public class Feedback {
+public class Feedback implements Serializable{
 	
 	int friendliness;
 	int knowledge;

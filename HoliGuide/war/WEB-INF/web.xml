@@ -77,5 +77,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>TourGuideFeedback</servlet-name>
 		<url-pattern>/tourguidefeedback</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TourGuideViewProfile</servlet-name>
+		<servlet-class>com.HoliGuide.servlet.TourGuideViewProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TourGuideViewProfile</servlet-name>
+		<url-pattern>/tourguideviewprofile</url-pattern>
+	</servlet-mapping>
+	
 
 </web-app>

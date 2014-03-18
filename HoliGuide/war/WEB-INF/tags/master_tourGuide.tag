@@ -80,7 +80,7 @@
 	      	<li class="dropdown">
 	          <a href="#" class="dropdown-toggle name" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><c:out value="${user}"/></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="/tourguidefeedback">My Profile</a>
+	          	<li><a href="/tourguideviewprofile">My Profile</a>
 	          	<li><a href="/viewitinerarylist">Switch to Traveler</a>
 	          	<li><a href="/app/index2.html">Logout</a></li>
 	          </ul>

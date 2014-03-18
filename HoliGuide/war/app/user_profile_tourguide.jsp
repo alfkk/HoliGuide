@@ -4,7 +4,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="com.HoliGuide.model.*" %>
 
-<t:master>
+<t:master_tourGuide>
 	<jsp:attribute name="css">
 		<link href="" rel="stylesheet">
 	  	<style type="text/css">
@@ -317,7 +317,7 @@
       		<div style="overflow: hidden;">
       		<div class="row">
 			  <div class="col-xs-12 page-header-content">
-			  	<h2><span> Tour Guide Profile </span></h2>
+			  	<h2><span> Profile </span></h2>
 			  </div>
 			</div>
 			
@@ -340,23 +340,7 @@
 		  	<img src="..\lib\img\g1.jpg" class="img-responsive img-rounded imageSize" alt="Responsive image">
 		  	</div>
 		  
-		   <div class="row leftpaneltopcontent">
-			   	<div class="col-xs-12 col-sm-12 col-md-12">
-			   		<div class="row">
-			   			<a href="/viewguide"><button class="btn btn-warning btn-sm buttonwidth">Add to Favourites</button></a>
-			   		</div>
-			   		
-			   </div>
-		   </div>
 		   
-		  <div class="row leftpaneltopcontent">
-			   	<div class="col-xs-12 col-sm-12 col-md-12">
-			   		<div class="row">
-			   			<a href="#giveFeedback"><button class="btn btn-warning btn-sm buttonwidth">Give Feedback</button></a>
-			   		</div>
-			   		
-			   </div>
-		   </div>
 		   
 		  
 		   <div class="row leftpaneltopcontent">
@@ -666,4 +650,4 @@
 	</form>
 	
 	</jsp:body>
-</t:master>
+</t:master_tourGuide>

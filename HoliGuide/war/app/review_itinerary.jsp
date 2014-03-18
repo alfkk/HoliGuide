@@ -3,7 +3,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<t:master>
+<t:master_tourGuide>
 	<jsp:attribute name="css">
 		<link href="/lib/ext/datepicker/datepicker3.css" rel="stylesheet">
 		<link href="/lib/ext/bootstrap-combobox/bootstrap-combobox.css" rel="stylesheet">
@@ -164,4 +164,4 @@
         	</div>
         </div>
 	</jsp:body>
-</t:master>
+</t:master_tourGuide>

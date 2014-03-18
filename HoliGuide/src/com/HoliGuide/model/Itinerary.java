@@ -1,7 +1,11 @@
 package com.HoliGuide.model;
+import java.io.Serializable;
+import javax.persistence.Id;
 
-public class Itinerary {
+
+public class Itinerary implements Serializable{
 	
+
 	String itineraryID;
 	String destination;
 	String status;
