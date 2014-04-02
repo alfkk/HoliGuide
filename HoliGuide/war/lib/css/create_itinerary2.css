@@ -1,0 +1,99 @@
+@CHARSET "ISO-8859-1";
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+ul.example li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+
+ul.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+ul.simple_with_animation li a {
+  cursor: pointer; 
+}
+
+ul.vertical {
+	margin: 0 0 9px 0; 
+}
+
+ul.vertical li {
+	display: block;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+	color: #fff;
+	background: #595959;
+}
+
+ul.vertical li.placeholder {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: none; 
+}
+
+ul.vertical li.placeholder:before {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	margin-top: -5px;
+	left: -5px;
+	top: -4px;
+	border: 5px solid transparent;
+	border-left-color: red;
+	border-right: none;
+}
+
+.right-bar {
+  border-style: none none none solid;
+  border-width: 0 0 0 2px;
+}
+
+.list-group-item {
+	background: rgba(100, 100, 100, 0.5);
+}
+
+ul.vertical li.comment-item {
+	color: #fff;
+	background: #0d6e8c;
+}
+
+ul.vertical li.itinerary-item {
+	color: #fff;
+	background: #d46138;
+}
+
+a.delete, a.remove, a.add, a.cal, a.comm {
+	float: right;
+	color: #000;
+}
+
+a.cal, a.comm {
+	margin-right: 10px;
+}
+
+.cal-content {
+	width: auto;
+	color: #000;
+}
+
+.popover-content {
+	width: 250px;
+}
+
+ul.vertical li .popover-content {
+	color: #f00;
+}
