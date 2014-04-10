@@ -11,4 +11,4 @@ This application serves as a high fidelity prototype of a tou guide finder appli
 ##Application link
 
 Please use the following link to access the live application in appengine:
-http://1-dot-holiguideg1t7.appspot.com/
+http://1-dot-holiguideg1t7iter3.appspot.com/
