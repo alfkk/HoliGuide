@@ -431,7 +431,7 @@ function downloadGuideItinerary()
 								Budget: $1000
 								</div>
 								<div class="col-xs-6">
-								Proposals Received: 0
+								Proposals Received: 3
 								</div>
 							</div>
 							<div class="row">

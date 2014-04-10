@@ -15,31 +15,31 @@ public class ViewItineraryServlet extends HttpServlet {
 		
 		
 		arrList = new ArrayList<Itinerary>();
-		Itinerary itinerary1 = new Itinerary("0", "Singapore , Singapore", "Pending Review", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","0","6","Edward");
+		Itinerary itinerary1 = new Itinerary(Long.valueOf(0), "Singapore , Singapore", "Singapore", "Pending Review", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","0","6","Edward", "");
 		arrList.add(itinerary1);
 		
-		Itinerary itinerary2 = new Itinerary("1", "Singapore , Singapore", "Reviewed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","2","2","Edward");
+		Itinerary itinerary2 = new Itinerary(Long.valueOf(1), "Singapore , Singapore", "Singapore", "Reviewed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","2","2","Edward", "");
 		arrList.add(itinerary2);
 		
-		Itinerary itinerary3 = new Itinerary("2", "Singapore , Singapore", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward");
+		Itinerary itinerary3 = new Itinerary(Long.valueOf(2), "Singapore , Singapore", "Singapore", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward", "");
 		arrList.add(itinerary3);
 		
-		Itinerary itinerary4 = new Itinerary("3", "Singapore , Singapore", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward");
+		Itinerary itinerary4 = new Itinerary(Long.valueOf(3), "Singapore , Singapore", "Singapore", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward", "");
 		arrList.add(itinerary4);
 		
-		Itinerary itinerary5 = new Itinerary("4", "Indonesia , Bali", "Pending Review", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","0","6","Edward");
+		Itinerary itinerary5 = new Itinerary(Long.valueOf(4), "Indonesia , Bali", "Indonesia", "Pending Review", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","0","6","Edward", "");
 		arrList.add(itinerary5);
 		
-		Itinerary itinerary6 = new Itinerary("5", "Indonesia , Bali", "Reviewed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","2","2","Edward");
+		Itinerary itinerary6 = new Itinerary(Long.valueOf(5), "Indonesia , Bali", "Indonesia", "Reviewed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","2","2","Edward", "");
 		arrList.add(itinerary6);
 		
-		Itinerary itinerary7 = new Itinerary("6", "Indonesia , Bali", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward");
+		Itinerary itinerary7 = new Itinerary(Long.valueOf(6), "Indonesia , Bali", "Indonesia", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward", "");
 		arrList.add(itinerary7);
 		
-		Itinerary itinerary8 = new Itinerary("7", "Indonesia , Bali", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward");
+		Itinerary itinerary8 = new Itinerary(Long.valueOf(7), "Indonesia , Bali", "Indonesia", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward", "");
 		arrList.add(itinerary8);
 		
-		Itinerary itinerary9 = new Itinerary("8", "Singapore , Singapore", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward");
+		Itinerary itinerary9 = new Itinerary(Long.valueOf(8), "Singapore , Singapore", "Indonesia", "Closed", "Jan 24 to 25 2014", "13 Dec 2013", "$1,050","4","3","Edward", "");
 		arrList.add(itinerary9);
 		
 		String delete = req.getParameter("Delete");

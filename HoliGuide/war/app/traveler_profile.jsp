@@ -250,20 +250,6 @@
 	<jsp:body>
 
    <div class="content">   
-	<div class="page-header">
-      		<div style="overflow: hidden;">
-      		<div class="row">
-			  <div class="col-xs-12 page-header-content">
-			  	<h3><span> My Profile </span></h3>
-			  </div>
-			</div>
-			
-          	</div>
-          	 <div class="page-header-content">  	 
-          
-			
-			  </div>
-     </div> 
       
      <div id="page1">
 		 <div class="row padrow">

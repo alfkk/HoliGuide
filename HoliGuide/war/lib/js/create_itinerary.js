@@ -40,6 +40,8 @@ $('#add-comment').click(function(event) {
 			text + '</div></li>');
 	$('textarea.comment').val('');
 	sortList($('#itemContainer1'), "li", "span.cal");
+	sortList($('#itemContainer1'), "li", "div:last-child");
+	sortList($('#itemContainer1'), "li", "div.name");
 	popoverSet();
 	paginateChosen();
 	event.preventDefault();
@@ -67,6 +69,8 @@ $('#add-itinerary').click(function(event) {
 			text + '</div></li>');
 	$('textarea.itinerary').val('');
 	sortList($('#itemContainer1'), "li", "span.cal");
+	sortList($('#itemContainer1'), "li", "div:last-child");
+	sortList($('#itemContainer1'), "li", "div.name");
 	popoverSet();
 	paginateChosen();
 	event.preventDefault();
@@ -188,7 +192,7 @@ function paginateChosen() {
 	});
 	if($('#itemContainer1 li').length == 0) {
 		$("div.holder1").jPagesTwo("destroy");
-		$('#itemContainer1').parent('div').find('ul').after('<div class="removable alert alert-info">Please add some itinerary from the selection on the left.</div>');
+		$('#itemContainer1').parent('div').find('ul').after('<div class="removable alert alert-info">Please add some itinerary from the selection on the right.</div>');
 	}
 }
 paginate();
@@ -217,6 +221,8 @@ $(document).on('change','.day-choice',function() {
     $('.cal').popover('hide');
     $("div.holder1").jPagesTwo("destroy");
     sortList($('#itemContainer1'), "li", "span.cal");
+	sortList($('#itemContainer1'), "li", "div:last-child");
+	sortList($('#itemContainer1'), "li", "div.name");
     paginateChosen();
 })
 
@@ -262,3 +268,41 @@ function changeDayChoice(dateCnt) {
 }
 changeDayChoice(1);
 /* End populate day-choice function */
+
+/* Submit Function */
+$('#submit').click(function() {
+	event.preventDefault();
+	
+	var from_date = $('input[name=from_date]').val();
+	var to_date = $('input[name=to_date]').val();
+	var trav_num = $('#trav_num').val();
+	var budget = $('#budget').val();
+	var destination = "";
+	var itinerary = [];
+	
+	$('#itemContainer1 li.list-group-item').each(function( data ) {
+		if(destination == "")  destination = $(this).find('.country').text();
+		if($(this).find('.name').text() != "") {
+			itinerary.push( $(this).find('.name').text() );
+		} else {
+			itinerary.push( $(this).find('div:last').text() + " -" + $(this).find('.cal').text() );
+		}
+	});
+	
+	console.log("from_date   : " + from_date);
+	console.log("to_date     : " + to_date);
+	console.log("trav_num    : " + trav_num);
+	console.log("budget      : " + budget);
+	console.log("destination : " + destination);
+	console.log("itinerary   : " + itinerary);
+	
+	$().redirect('/createitinerary', {
+		'from_date': from_date,
+		'to_date': to_date,
+		'trav_num': trav_num,
+		'budget': budget,
+		'destination': destination,
+		'itinerary': itinerary
+	});
+});
+

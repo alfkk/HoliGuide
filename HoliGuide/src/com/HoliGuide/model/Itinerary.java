@@ -1,41 +1,98 @@
 package com.HoliGuide.model;
 import java.io.Serializable;
-import javax.persistence.Id;
+import java.util.List;
 
+import javax.persistence.Id;
+import com.googlecode.objectify.*;
 
 public class Itinerary implements Serializable{
 	
+  static {
+	    ObjectifyService.register(Itinerary.class);
+  }
 
-	String itineraryID;
+	
+	@Id Long itineraryID;
 	String destination;
+	String country;
 	String status;
 	String travelPeriod;
 	String creationDate;
 	String budget;
-	String reviewReceived;
 	String noOfPax;
-	String preferredTourGuide;
+	String email;
+	String comment;
+	String from_date;
+	String to_date;
+	String itinerary;
+	String create_DateTimeStart;
+	String create_DateTimeEnd;
 	
-	public Itinerary(String itineraryID, String destination, String status,
+	public Itinerary(){
+	}
+	public Itinerary(long itineraryID, String destination, String country, String status,
 			String travelPeriod, String creationDate, String budget,
-			String reviewReceived, String noOfPax, String preferredTourGuide) {
+			String reviewReceived, String noOfPax, String email, String comment) {
 		super();
 		this.itineraryID = itineraryID;
 		this.destination = destination;
+		this.country = country;
 		this.status = status;
 		this.travelPeriod = travelPeriod;
 		this.creationDate = creationDate;
 		this.budget = budget;
-		this.reviewReceived = reviewReceived;
 		this.noOfPax = noOfPax;
-		this.preferredTourGuide = preferredTourGuide;
+		//this.preferredTourGuide = preferredTourGuide;
+		this.email = email;
+		this.comment = comment;
+	}
+	
+	
+	public Itinerary(String country, String from_date, String to_date, String noOfPax, String budget, String itinerary, String email, String create_DateTimeEnd, String create_DateTimeStart) {
+		super();
+		//this.itineraryID = itineraryID;
+		this.country = country;
+		this.from_date = from_date;
+		this.to_date = to_date;
+		this.noOfPax = noOfPax;
+		this.budget = budget;
+		this.itinerary = itinerary;
+		this.email = email;
+		this.create_DateTimeEnd = create_DateTimeEnd;
+		this.create_DateTimeStart = create_DateTimeStart;
+	}
+	
+	
+	public Itinerary(String destination, String country, String status,
+			String travelPeriod, String creationDate, String budget,
+			String reviewReceived, String noOfPax, String email, String comment) {
+		super();
+		//this.itineraryID = itineraryID;
+		this.destination = destination;
+		this.country = country;
+		this.status = status;
+		this.travelPeriod = travelPeriod;
+		this.creationDate = creationDate;
+		this.budget = budget;
+		this.noOfPax = noOfPax;
+		//this.preferredTourGuide = preferredTourGuide;
+		this.email = email;
+		this.comment = comment;
 	}
 
-	public String getItineraryID() {
+	public Long getItineraryID() {
 		return itineraryID;
 	}
 
-	public void setItineraryID(String itineraryID) {
+	public String getCountry() {
+		return country;
+	}
+	
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	public void setItineraryID(Long itineraryID) {
 		this.itineraryID = itineraryID;
 	}
 
@@ -79,14 +136,6 @@ public class Itinerary implements Serializable{
 		this.budget = budget;
 	}
 
-	public String getReviewReceived() {
-		return reviewReceived;
-	}
-
-	public void setReviewReceived(String reviewReceived) {
-		this.reviewReceived = reviewReceived;
-	}
-
 	public String getNoOfPax() {
 		return noOfPax;
 	}
@@ -94,16 +143,41 @@ public class Itinerary implements Serializable{
 	public void setNoOfPax(String noOfPax) {
 		this.noOfPax = noOfPax;
 	}
-
-	public String getPreferredTourGuide() {
-		return preferredTourGuide;
+	
+	public String comment() {
+		return comment;
 	}
 
-	public void setPreferredTourGuide(String preferredTourGuide) {
-		this.preferredTourGuide = preferredTourGuide;
+	public void comment(String comment) {
+		this.comment = comment;
 	}
 	
+	public static List<Itinerary> retrieveAllItineraryByEmail(String email){
+		Objectify objectify = ObjectifyService.begin();
+		Query<Itinerary> query = objectify.query(Itinerary.class);
+		query.filter("email =",email);
+		return query.list();
+	}
 	
+	public static List<Itinerary> retrieveAllItinerary(){
+		Objectify objectify = ObjectifyService.begin();
+		Query<Itinerary> query = objectify.query(Itinerary.class);
+		return query.list();
+	}
 	
+	public void addItinerary(Itinerary itinerary){
+		Objectify objectify = ObjectifyService.begin();
+		//Itinerary itinerary = new Itinerary(destination, country, status, travelPeriod, creationDate, budget, reviewReceived, noOfPax,email, comment);
+		objectify.put(itinerary);
+	}
 	
+	public static void removeItinerary(long itineraryId) {
+		Objectify objectify = ObjectifyService.begin();
+		objectify.delete(Itinerary.class, itineraryId);
+	}
+	
+	public static void reproposeItinerary(Itinerary itinerary) {
+		Objectify objectify = ObjectifyService.begin();
+		objectify.put(itinerary);
+	}		
 }

@@ -1,9 +1,18 @@
 package com.HoliGuide.model;
 import java.io.Serializable;
+import com.googlecode.objectify.*;
+
+import java.util.*;
 import javax.persistence.Id;
 
 public class Feedback implements Serializable{
 	
+	static {
+	    ObjectifyService.register(Feedback.class);
+	}
+	
+	@Id Long id;
+	String email;
 	int friendliness;
 	int knowledge;
 	int communication;
@@ -13,9 +22,12 @@ public class Feedback implements Serializable{
 	String comment;
 	String receiver;
 	
+	public Feedback(){
+	}
+	
 	public Feedback(int friendliness, int knowledge, int communication,
 			int helpfulness, int overall, String rater, String comment,
-			String receiver) {
+			String receiver, String email) {
 		super();
 		this.friendliness = friendliness;
 		this.knowledge = knowledge;
@@ -25,6 +37,7 @@ public class Feedback implements Serializable{
 		this.rater = rater;
 		this.comment = comment;
 		this.receiver = receiver;
+		this.email= email;
 	}
 
 	public int getFriendliness() {
@@ -89,5 +102,26 @@ public class Feedback implements Serializable{
 
 	public void setReceiver(String receiver) {
 		this.receiver = receiver;
+	}
+	
+	public String getEmail(){
+		return email;
+	}
+	
+	public Feedback addFeedback(int friendliness, int knowledge, int communication,
+			int helpfulness, int overall, String rater, String comment,
+			String receiver, String email){
+		Objectify objectify = ObjectifyService.begin();
+		Feedback feedback = new Feedback(friendliness, knowledge, communication, helpfulness, overall,
+				rater, comment, receiver, email);
+		objectify.put(feedback);
+		return feedback;
+	}
+	
+	public static List<Feedback> retrieveAllFeedbackByEmail(String email){
+		Objectify objectify = ObjectifyService.begin();
+		Query<Feedback> query = objectify.query(Feedback.class);
+		query.filter("email =",email);
+		return query.list();
 	}
 }

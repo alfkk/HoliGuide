@@ -36,7 +36,7 @@ public class ReviewItinerary extends HttpServlet {
 		});
 		
 		req.setAttribute("selectionList", arrList);
-		RequestDispatcher rd = req.getRequestDispatcher("/app/review_itinerary.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/app/review_itinerary2.jsp");
 		rd.forward(req, resp);
 	}
 }

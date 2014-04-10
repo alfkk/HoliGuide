@@ -15,13 +15,6 @@
 	<jsp:body>
 		<div class="content">   
 			<div class="page-header">
-				<div style="overflow: hidden;">
-      		<div class="row">
-					  <div class="col-sm-12 page-header-content">
-					  	<h3><span> View Tour Guide </span></h3>
-					  </div>
-					</div>
-				</div>
 				<div class="page-header-content">
 					Filter by:
 					<input type="text" class="form-control headerDDLStyle filter filter-name" placeholder="Search Name..." />

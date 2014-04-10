@@ -20,16 +20,8 @@
   </jsp:attribute>
 	<jsp:body>  
 		<div class="col-md-12 content">
-			<div class="page-header">
-				<div style="overflow: hidden;">
-      		<div class="row">
-					  <div class="col-sm-12 page-header-content">
-					  	<h3>Review Itinerary</h3>
-					  </div>
-					</div>
-				</div>
-			</div>
 			<div class="col-md-5 left-bar">
+			<p style="font-size:30px"><strong>Finalised Itinerary</strong></p>
 				<form class="form-horizontal" role="form" action="app/success_page_tourguide_review.jsp">
 				  <div class="form-group">
 				    <label class="col-sm-4 control-label">Travel date</label>
@@ -96,6 +88,7 @@
 				</form>
 			</div>
 			<div class="col-md-7 right-bar">
+			<p style="font-size:30px"><strong>Search For Itinerary</strong></p>
 				<form class="form-horizontal" role="form">
 				  <div class="form-group">
 				  	<div class="col-sm-5">

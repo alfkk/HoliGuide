@@ -78,7 +78,7 @@
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li class="dropdown">
-	          <a href="#" class="dropdown-toggle name" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><c:out value="${user}"/></a>
+	          <a href="#" class="dropdown-toggle name" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><strong><span style="padding-left:8px">Me</span></strong><c:out value="${user}"/></a>
 	          <ul class="dropdown-menu">
 	          	<li><a href="/tourguideviewprofile">My Profile</a>
 	          	<li><a href="/viewitinerarylist">Switch to Traveler</a>

@@ -104,5 +104,7 @@ public class CreateItineraryServlet2 extends HttpServlet {
 			Itinerary itineraryModel = new Itinerary();
 			Itinerary newItinerary = new Itinerary(country, from_date, to_date, noOfPax, budget, itinerary, email, endDateTime, start_DateTime);
 			itineraryModel.addItinerary(newItinerary);
+			//resp.sendRedirect("app/survey_thankyou.jsp");
+			resp.sendRedirect("app/success_page_traveller_create_itinerary.jsp");
 	}
 }

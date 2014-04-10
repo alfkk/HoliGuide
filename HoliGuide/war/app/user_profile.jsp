@@ -312,21 +312,7 @@
   </jsp:attribute>
 	<jsp:body>
 
-   <div class="content">   
-	<div class="page-header">
-      		<div style="overflow: hidden;">
-      		<div class="row">
-			  <div class="col-xs-12 page-header-content">
-			  	<h2><span> Tour Guide Profile </span></h2>
-			  </div>
-			</div>
-			
-          	</div>
-          	 <div class="page-header-content">  	 
-          
-			
-			  </div>
-     </div> 
+   <div class="content">
       
      <div id="page1">
 		 <div class="row padrow">

@@ -47,10 +47,10 @@ public class GiveFeedbackServlet extends HttpServlet {
 		}
 		
 		
-		Feedback feedback1 = new Feedback(4,5,4,3,(4+5+4+3)/4,rater,comment,receiver);
+		Feedback feedback1 = new Feedback(4,5,4,3,(4+5+4+3)/4,rater,comment,receiver,"");
 		arrList.add(feedback1);
 		
-		Feedback feedback2 = new Feedback(4,4,4,4,(4+4+4+4)/4,rater,comment,receiver);
+		Feedback feedback2 = new Feedback(4,4,4,4,(4+4+4+4)/4,rater,comment,receiver,"");
 		arrList.add(feedback2);
 		
 		req.setAttribute("feedbackList", arrList);
@@ -68,7 +68,7 @@ public class GiveFeedbackServlet extends HttpServlet {
 		String receiver = "Edward";
 		String comment=req.getParameter("comment");
 		
-		Feedback feedback = new Feedback(firstFeedback, secondFeedback, thirdFeedback, fourthFeedback, overallFeedback, rater, comment, receiver);
+		Feedback feedback = new Feedback(firstFeedback, secondFeedback, thirdFeedback, fourthFeedback, overallFeedback, rater, comment, receiver,"");
 		//HttpSession session = req.getSession();
 		//session.setAttribute("feedback", feedback);
 		arrList.add(feedback);

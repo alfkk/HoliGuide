@@ -126,6 +126,8 @@ $(".chosen").on('click','.remove',function(e){
 	$(this).children('span').attr('class', 'glyphicon glyphicon-plus');
 	$(this).parents('li').find('a.cal').remove();
 	$(this).parents('li').find('span.cal').remove();
+	$(this).parents('li').find('.comm').remove();
+	$(this).parents('li').find('.comment-content').remove();
 	var text = $(this).parent().html();
     $("ul.selection").append('<li class="list-group-item">' + text + '</li>');
     $(this).parent().remove();
@@ -204,6 +206,7 @@ function popoverSet2() {
 		$(this).parents('li').find('.comment').focus();
 	});
 }
+popoverSet2();
 /* End add comment function */
 
 /* Add calendar function */

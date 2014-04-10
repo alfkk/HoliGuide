@@ -142,13 +142,7 @@
 <jsp:body>
    <div class="content">   
 		<div class="page-header">
-      		<div style="overflow: hidden;">
-	      		<div class="row">
-				  <div class="col-xs-12 page-header-content">
-				  	<h2><span> Home Itinerary </span></h2>
-				  </div>
-				</div>
-          	</div>
+
           	<div class="page-header-content">
 	          	 Filter by:
 	          	 <input type="text" class="form-control headerDDLStyle filter filter-country" placeholder="Search Country..." />
@@ -214,9 +208,7 @@
 							 <div class="row">
 							 	Creation Date: <c:out value="${guide.creationDate}"/>
 							 </div>
-							 <div class="row">
-							 	Review Received: <c:out value="${guide.reviewReceived}"/>
-							 </div>
+							 
 						</div>
 					</div>
 					<div class="row buttonRightPositioning">

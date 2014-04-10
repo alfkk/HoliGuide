@@ -1,5 +1,5 @@
 <%@tag description="Master Template For HoliGuide App" pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@attribute name="css" fragment="true" %>
 <%@attribute name="js" fragment="true" %>
 <% String name = request.getParameter("Id");%>
@@ -123,10 +123,6 @@
 	}
 	</script>
 	
-	<script type="text/javascript">
-		var user = sessionStorage.getItem("name");
-		//alert(user);
-	</script>
 	
 	<!-- End of Google Plus -->
 	
@@ -151,16 +147,16 @@
 	    <div class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-left">
 	      	<li><a href="/viewitinerarylist">My Itinerary</a></li>
-	      	<li><a href="/createitinerary">Create Itinerary</a></li>
-	      	<li><a href="/viewguide">Tour Guides</a></li>
+	      	<li><a href="/createitinerary2">Create Itinerary</a></li>
+	      	<li><a href="/viewguide">View All Tour Guides</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li class="dropdown">
-	          <a href="#" class="dropdown-toggle name" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+	          <a href="#" class="dropdown-toggle name" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><strong><span style="padding-left:8px">Me</span></strong><c:out value="${username}" /></a>
 	          <ul class="dropdown-menu">
-	          	<li><a href="/app/traveler_profile.jsp">My Profile</a>
-	          	<li><a href="/viewtourguideitinerarylist">Switch To Tour Guide</a>
-	          	<li><a href="/app/index2.html">Logout</a></li>
+	          	<li><a href="/app/traveler_profile.jsp">My Profile</a> 
+	          	<li><a href="/viewtourguideitinerarylist">Switch To Tour Guide</a> 
+	          	<li><a href="/app/index2.html">Logout</a></li> 
 	          </ul>
 	        </li>
 	      </ul>

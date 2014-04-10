@@ -61,12 +61,28 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/createitinerary</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>CreateItinerary2</servlet-name>
+		<servlet-class>com.HoliGuide.servlet.CreateItineraryServlet2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateItinerary2</servlet-name>
+		<url-pattern>/createitinerary2</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>ReviewItinerary</servlet-name>
 		<servlet-class>com.HoliGuide.servlet.ReviewItinerary</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ReviewItinerary</servlet-name>
 		<url-pattern>/reviewitinerary</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReviewItinerary2</servlet-name>
+		<servlet-class>com.HoliGuide.servlet.ReviewItinerary2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReviewItinerary2</servlet-name>
+		<url-pattern>/reviewitinerary2</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -86,6 +102,4 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>TourGuideViewProfile</servlet-name>
 		<url-pattern>/tourguideviewprofile</url-pattern>
 	</servlet-mapping>
-	
-
 </web-app>

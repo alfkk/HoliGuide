@@ -16,20 +16,13 @@
 		<script src="/lib/ext/bootstrap-combobox/bootstrap-combobox.js"></script>
 		<script src="/lib/js/jPages.min.js"></script>
 		<script src="/lib/js/jPagesTwo.min.js"></script>
+		<script src="/lib/js/jquery.redirect.min.js"></script>
 		<script src="/lib/js/create_itinerary.js"></script>
   </jsp:attribute>
 	<jsp:body>  
 		<div class="col-md-12 content">
-			<div class="page-header">
-				<div style="overflow: hidden;">
-      		<div class="row">
-					  <div class="col-sm-12 page-header-content">
-					  	<h3>Create Itinerary</h3>
-					  </div>
-					</div>
-				</div>
-			</div>
 			<div class="col-md-5 left-bar">
+				<p style="font-size:30px"><strong>My Itinerary</strong></p>
 				<form class="form-horizontal" role="form" action="/app/success_page_traveller_create_itinerary.jsp">
 				  <div class="form-group">
 				    <label class="col-sm-4 control-label">Travel date</label>
@@ -39,20 +32,6 @@
 					    	<span class="input-group-addon">to</span>
 					      <input type="text" class="form-control input-sm" name="to_date" />
 					    </div>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label class="col-sm-4 control-label">Preferred guide</label>
-				    <div class="col-sm-8">
-				      <select class="form-control input-sm combobox" id="guide" name="guide">
-					    	<option value="">Tour Guide</option>
-					    	<option value="all">No Preference</option>
-					    	<option value="Andy Suwandy">Andy Suwandy</option>
-					    	<option value="Budi Saputra">Budi Saputra</option>
-					    	<option value="Nguyen Something">Nguyen Something</option>
-					    	<option value="Random Thailand Dude">Random Thailand Dude</option>
-					    	<option value="Any Other Name">Any Other Name</option>
-					    </select>
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -89,12 +68,13 @@
 				    <div class="col-sm-12">
 				      <!--  <button class="btn btn-info">Summary</button>  -->
 				      <button type="reset" class="btn btn-warning reset">Clear All</button>
-				      <button type="submit" class="btn btn-primary" >Submit</button>
+				      <button type="submit" id="submit" class="btn btn-primary" >Submit</button>
 				    </div>
 				  </div>
 				</form>
 			</div>
 			<div class="col-md-7 right-bar">
+			<p style="font-size:30px"><strong>Search Itinerary</strong></p>
 				<form class="form-horizontal" role="form">
 				  <div class="form-group">
 				  	<div class="col-sm-5">

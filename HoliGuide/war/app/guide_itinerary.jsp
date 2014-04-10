@@ -133,13 +133,6 @@
 <jsp:body>
    <div class="content">   
 	<div class="page-header">
-      		<div style="overflow: hidden;">
-	      		<div class="row">
-				  <div class="col-xs-12 page-header-content">
-				  	<h2><span> My Itinerary </span></h2>
-				  </div>
-				</div>
-          	</div>
           	<div class="page-header-content">
 	          	  Filter by:
 	          	 <input type="text" class="form-control headerDDLStyle filter-country" placeholder="Search Country..." />
@@ -188,17 +181,13 @@
 					 <div class="row">
 					 	Number of Pax: <c:out value="${guide.noOfPax}"/>
 					 </div>
-					 <div class="row">
-					 	Preferred Tour Guide: <a href="user_profile.jsp?name=<c:out value='${guide.preferredTourGuide}'/>"> <c:out value="${guide.preferredTourGuide}"/> </a>
-					 </div>
+					 
 				 </div>
 				<div class="col-xs-6 ">
 					 <div class="row">
 					 	Creation Date: <c:out value="${guide.creationDate}"/>
 					 </div>
-					 <div class="row">
-					 	Review Received: <c:out value="${guide.reviewReceived}"/>
-					 </div>
+					
 				</div>
 			</div>
 			
